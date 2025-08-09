@@ -22,7 +22,7 @@ const Hero = () => {
           Tu camino para dominar el desarrollo web empieza acá.
         </p>
 <div className="pt-60 flex justify-center items-center gap-24">
-  <NavLink to="/" className="bg-indigo-600 hover:bg-indigo-700 text-white text-xl font-semibold px-6 py-3 rounded-xl shadow-md transition-all duration-300">
+  <NavLink to="/Introduct/Introduccíon a la guia/"  className="bg-indigo-600 hover:bg-indigo-700 text-white text-xl font-semibold px-6 py-3 rounded-xl shadow-md transition-all duration-300">
     Iniciar
   </NavLink>
   <a href="#Introducíon" className="text-indigo-600 hover:text-indigo-200 border border-indigo-600 hover:border-indigo-200 text-xl font-semibold px-6 py-3 rounded-xl transition-all duration-300">

@@ -17,7 +17,7 @@ const HomePage = () => {
     whileInView: { opacity: 1, y: 0 },
   };
 
-  const transition = { duration: 0.8, delay: 0.4, ease: "easeInOut" };
+  const transition = { duration: 0.8, delay: 0.1, ease: "easeInOut" };
 
   return (
     <div className="flex flex-col items-center justify-center overflow-y-hidden ">
