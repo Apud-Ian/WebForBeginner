@@ -1,6 +1,6 @@
 export const IntroductArticles = [
     {title : "Introduccíon a la guia",
-        subTitels : ["las tegnologías que vas a aprender"],
+        subTitels : ["Las tegnologías que vas a aprender"],
         content : [
             {type : "paragraphs" , text : ["Aprender a programar puede parecer abrumador al principio: hay miles de tecnologías, herramientas y caminos posibles. Por eso creamos esta guía: para que tengas un mapa claro, práctico y accesible que te acompañe paso a paso desde cero."
                 , "Acá no necesitas experiencia previa. Vas a empezar entendiendo cómo funciona una página web, escribiendo tus primeras líneas de HTML, aplicando estilos con CSS y luego dando vida a tus sitios con JavaScript."
@@ -15,7 +15,7 @@ export const IntroductArticles = [
             ]},
     {
         title : 'Instalacion de VScode',
-        subTitels : ['como descargarlo?'],
+        subTitels : ['Como descargarlo?'],
         content :[{
           type : 'paragraphs', text : ['lsdsdlsdlaldaskdlskdajasljdask'],
         }],

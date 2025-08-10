@@ -26,7 +26,7 @@ const contentArticle = article?.content.map((content, index) => {
 
   return (
     <div className="col-span-3 text-gray-900 dark:text-gray-100 p-4 dark:bg-gray-900 bg-white rounded-lg shadow-lg">
-      <h1 className="text-5xl font-bold mb-4">{article.title}</h1>
+      <h1 className="text-4xl md:text-5xl font-bold text-gray-100 tracking-wide mb-4">{article.title}</h1>
       <div className="space-y-6">
         {contentArticle}
       </div>

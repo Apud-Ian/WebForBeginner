@@ -1,8 +1,8 @@
 const UnorderList = ({ items }) => {
     return (
-        <ul className="flex flex-col space-y-2 p-4 rounded-2xl ">
+        <ul className="list-disc list-inside space-y-2 text-gray-300 text-lg leading-relaxed ">
             {items.map((item, index) => (
-                <li className="text-xl font-semibold " key={index}>{item}</li>
+                <li className="flex items-start" key={index}>-{item}</li>
             ))}
         </ul>
     );
