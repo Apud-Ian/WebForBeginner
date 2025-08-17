@@ -1,6 +1,5 @@
 import Sidebar from '../components/SideBar.jsx';
 import { useParams } from 'react-router-dom';
-import LineArticle from '../components/LineArticle';
 import { IntroductArticles } from '../Articles/Introduct.js';
 import ArticleViewer from '../components/ArticleViewer.jsx';
 const Introduct = () => {
@@ -17,9 +16,16 @@ const article = IntroductArticles.find(article => article.title.toLowerCase() ==
     return <div className="text-center text-red-500">Article not found</div>;}
 
   return (
-    <div className="grid grid-cols-5 mt-12 gap-4 p-4">
+    <div className="flex flex-row m-2 mt-12 gap-6 p-4">
+        <div className="flex-1/4">
       <Sidebar titles={titles} subtitles={subtitles}/>
-      <ArticleViewer article={article}/> 
+      </div>
+      <div className='flex-3/4' >
+      <ArticleViewer titles={titles} article={article}/> 
+      </div>
+      <div className='flex-1/4'>
+
+      </div>
     </div>
   );
 }

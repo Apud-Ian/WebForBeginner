@@ -6,25 +6,28 @@ const Accordion = ({ title, subTitels, content }) => {
         setHidden(prev => prev.includes(index) ? prev.filter(i => i !== index) : [...prev, index]);
     };
     const Info = {subTitels: [], content: []};
-    if (!subTitels || !content || subTitels.length !== content.length) { 
-    subTitels.map((subTitle, index) => {
-        Info.subTitels.push(subTitle)
-        Info.content.push(content[index])    
-    })
+if (Array.isArray(subTitels) && Array.isArray(content) && subTitels.length === content.length) {
+  subTitels.forEach((subTitle, index) => {
+    Info.subTitels.push(subTitle);
+    Info.content.push(content[index]);
+  });
+} else {
+  console.error("Los arrays no existen o no tienen la misma longitud");
 }
     return (
-        <div className="p-4 m-2">
-            <h3 className="text-2xl font-bold mb-4">{title}</h3>
-            <div className="space-y-4">
-                {Info.map((Info, index) => (
-                    <div key={index} className="p-4" onClick={()=> handleClick(index)}>
-                        <h4 className="text-xl">{Info.subTitels[index]}</h4>
-                        <div className={hidden.includes(index) ? "p-4 rounded-lg" : "hidden"}>
-                            <p className="font-light">{Info.content[index]}</p>
-                        </div>
-                    </div>
-    ))}
+        <div className="p-2 m-2 ">
+                {Info.subTitels.map((sub, index) => (
+                <div key={index} className=" border-b" onClick={() => handleClick(index)}>
+                    <div className='flex select-none p-2 my-1
+                     justify-between align-middle cursor-pointer'>
+                    <h4 className="text-xl">{sub}</h4>
+                    <p className={hidden.includes(index)? "rotate-90 text-2xl transition-all ease-in" : "text-2xl transition-all ease-in-out"}>{'>'}</p>
+                </div>
+                <div className={hidden.includes(index) ? "p-2 my-1 rounded-lg transition-all ease-in" : "hidden transition-all ease-in-out"}>
+                <p className="font-light">{Info.content[index]}</p>
+                </div>
             </div>
+))}
         </div>
     )
 };

@@ -7,7 +7,7 @@ import Introduct from './pages/Introduct.jsx';
 import ScrollToHash from './components/ScrollToHass.jsx';
 const App = ()=>{
     return (
-        <div className='min-h-screen w-full dark:bg-teal-950 bg-teal-800 overflow-x-hidden'>
+        <div className='min-h-screen font-body w-full dark:bg-teal-deep bg-stone-100 overflow-x-hidden'>
             <Nav/>
             <ScrollToHash/>
             <Routes>

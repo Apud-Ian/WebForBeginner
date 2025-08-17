@@ -1,6 +1,18 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap");
 @import "tailwindcss";
+
+/* Variantes personalizadas */
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Tema: fuentes personalizadas */
+@theme {
+  --color-teal-deep: #001818;
+  --font-display: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+/* Estilos globales */
 html {
   scroll-behavior: smooth;
 }

@@ -5,7 +5,7 @@ const SideBar = ({ titles, subtitles }) => {
 
 
   return (
-    <div className="col-span-1 lg:h-[600px] p-2 gap-2 bg-white dark:bg-gray-900 rounded-lg shadow-lg top-20">
+    <div className="fixed col-span-1 font-display lg:h-[600px] p-2 gap-2 border border-gray-300 rounded-lg shadow-lg top-36">
       {titles.map((title, index) => {
         const isActive = title.toLowerCase() === tema?.toLowerCase();
         return (
@@ -16,7 +16,7 @@ const SideBar = ({ titles, subtitles }) => {
             {/* Link al título */}
             <Link
               to={`/Introduct/${title}/`}
-              className="text-gray-800 dark:text-gray-200 dark:hover:text-gray-50 hover:underline text-lg font-semibold"
+              className="text-gray-900 dark:text-gray-200 hover:text-gray-800 dark:hover:text-gray-50 hover:underline text-lg font-semibold"
             >
               {title}
             </Link>
@@ -26,7 +26,7 @@ const SideBar = ({ titles, subtitles }) => {
                 {subtitles.map((subtitle, subIndex) => (
                   <li
                     key={subIndex}
-                    className="text-gray-600 dark:text-gray-400 dark:hover:text-gray-300 text-md mt-2"
+                    className="text-gray-700 dark:text-gray-400 dark:hover:text-gray-100 text-md mt-2"
                   >
                     <a
                       href={`/Introduct/${title}/#${subtitle}`}
